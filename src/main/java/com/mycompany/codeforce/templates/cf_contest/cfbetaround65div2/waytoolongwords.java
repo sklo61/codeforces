@@ -1,21 +1,19 @@
-package com.mycompany.codeforce.templates.cf_contest.cf672div2;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.mycompany.codeforce.templates.cf_contest.cfbetaround65div2;
 
 /**
  *
- * @author 
+ * @author
  */
 import java.util.*;
 import java.io.*;
 
-public class cubessorting {
-
-    static class FastScanner {
+public class waytoolongwords {
+      static class FastScanner {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer("");
@@ -42,35 +40,18 @@ public class cubessorting {
     public static void main(String[] args) {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
-        int testcase = fs.nextInt();
-
-        //String strCurrentLine;
-
-        outer:
-        for (int tc = 0; tc < testcase; tc++) {
-            int digits = fs.nextInt();
-            //strCurrentLine = br.readLine();
-            //System.out.println(strCurrentLine);
-           // String[] arrays = strCurrentLine.split(" ");
-            int[] a = new int[digits];
-            for (int i = 0; i < digits; i++) {
-                a[i] = fs.nextInt();
-                // System.out.print(a[i]);
-            }
-
-            for (int i = 1; i < a.length; i++) {
-                if (a[i] >= a[i - 1]) {
-                    System.out.println("YES");
-                    continue outer;
-                }
-            }
-            System.out.println("NO");
-
+        int testcases = fs.nextInt();
+        
+        for(int i = 0; i < testcases; i++){
+            String word = fs.next();
+            int len = word.length();
+            
+            if(len > 10){
+                System.out.println(word.charAt(0) + String.valueOf(len - 2) + word.charAt(len-1) + "");
+            }else
+                System.out.println(word);
+            
         }
-
-        out.close ();
     }
 
-  
 }
-

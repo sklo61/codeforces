@@ -7,7 +7,7 @@ package com.mycompany.codeforce.templates.cf_contest.cf674div3;
 
 /**
  *
- * @author lo010
+ * @author 
  */
 import java.util.*;
 import java.io.*;

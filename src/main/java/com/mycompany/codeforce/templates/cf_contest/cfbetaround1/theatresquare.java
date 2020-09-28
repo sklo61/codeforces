@@ -1,20 +1,20 @@
-package com.mycompany.codeforce.templates.cf_contest.cf672div2;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.mycompany.codeforce.templates.cf_contest.cfbetaround1;
 
 /**
  *
  * @author 
+ * 
+ * 
  */
 import java.util.*;
 import java.io.*;
 
-public class cubessorting {
-
+public class theatresquare {
     static class FastScanner {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -38,39 +38,17 @@ public class cubessorting {
             return Long.parseLong(next());
         }
     }
-
+    
     public static void main(String[] args) {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
-        int testcase = fs.nextInt();
-
-        //String strCurrentLine;
-
-        outer:
-        for (int tc = 0; tc < testcase; tc++) {
-            int digits = fs.nextInt();
-            //strCurrentLine = br.readLine();
-            //System.out.println(strCurrentLine);
-           // String[] arrays = strCurrentLine.split(" ");
-            int[] a = new int[digits];
-            for (int i = 0; i < digits; i++) {
-                a[i] = fs.nextInt();
-                // System.out.print(a[i]);
-            }
-
-            for (int i = 1; i < a.length; i++) {
-                if (a[i] >= a[i - 1]) {
-                    System.out.println("YES");
-                    continue outer;
-                }
-            }
-            System.out.println("NO");
-
-        }
-
-        out.close ();
+        Long height = fs.nextLong();
+        Long width = fs.nextLong();
+        Long stone = fs.nextLong();
+        
+        Long x = height%stone == 0 ? height/stone : (height/stone) + 1;
+        Long y = width%stone == 0 ? width/stone : (width/stone) + 1; 
+        
+        System.out.println(x * y);
     }
-
-  
 }
-

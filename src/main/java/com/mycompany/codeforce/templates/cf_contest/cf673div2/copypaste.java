@@ -10,7 +10,7 @@ import java.io.*;
 
 /**
  *
- * @author kuang
+ * @author 
  */
 public class copypaste {
 
