@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.codeforce.templates.cf_contest.cfbetaround65div2;
+package com.mycompany.codeforce.templates.cf_contest.cfbeta1;
 
 /**
  *
- * @author
+ * @author 
+ * 
+ * 
  */
 import java.util.*;
 import java.io.*;
 
-public class waytoolongwords {
-      static class FastScanner {
+public class theatresquare {
+    static class FastScanner {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer("");
@@ -36,22 +38,17 @@ public class waytoolongwords {
             return Long.parseLong(next());
         }
     }
-
+    
     public static void main(String[] args) {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
-        int testcases = fs.nextInt();
+        Long height = fs.nextLong();
+        Long width = fs.nextLong();
+        Long stone = fs.nextLong();
         
-        for(int i = 0; i < testcases; i++){
-            String word = fs.next();
-            int len = word.length();
-            
-            if(len > 10){
-                System.out.println(word.charAt(0) + String.valueOf(len - 2) + word.charAt(len-1) + "");
-            }else
-                System.out.println(word);
-            
-        }
+        Long x = height%stone == 0 ? height/stone : (height/stone) + 1;
+        Long y = width%stone == 0 ? width/stone : (width/stone) + 1; 
+        
+        System.out.println(x * y);
     }
-
 }

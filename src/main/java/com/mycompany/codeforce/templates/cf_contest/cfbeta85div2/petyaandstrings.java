@@ -3,19 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.codeforce.templates.cf_contest.cfbetaround4div2;
+package com.mycompany.codeforce.templates.cf_contest.cfbeta85div2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.StringTokenizer;
+import java.util.*;
+import java.io.*;
 
-/**
- *
- * @author 
- */
-public class watermelon {
+public class petyaandstrings {
+
     static class FastScanner {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -43,15 +37,24 @@ public class watermelon {
     public static void main(String[] args) {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
-        int num = fs.nextInt();
-        int rei = num - 2;
+        String one = fs.next().toLowerCase();
+        String two = fs.next().toLowerCase();
         
-        if(num < 4){
-            System.out.println("NO");
-        }else if(rei%2 == 0){
-            System.out.println("YES");
-        }else
-            System.out.println("NO");
+        int flag = 0;
+        
+        for(int i = 0; i < one.length(); i++){
+            if((int)one.charAt(i) > (int)two.charAt(i)){
+                flag = 1;
+                break;
+            }else if((int)one.charAt(i) < (int)two.charAt(i)){
+                flag = -1;
+                break;
+            }
+        }
+        System.out.println(flag);
     }
 
+  
 }
+
+
