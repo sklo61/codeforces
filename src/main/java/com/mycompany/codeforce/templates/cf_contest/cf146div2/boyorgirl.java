@@ -3,12 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.codeforce.templates.cf_contest.vkup2012qualification1;
+package com.mycompany.codeforce.templates.cf_contest.cf146div2;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
 
-public class nextround {
+/**
+ *
+ * @author lo010
+ */
+public class boyorgirl {
 
     static class FastScanner {
 
@@ -37,40 +44,30 @@ public class nextround {
     public static void main(String[] args) {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
-        int testcases = fs.nextInt();
-        int pass = fs.nextInt();
+        char c[] = fs.next().toCharArray();
+        int ch[] = new int[26];
         int total = 0;
-        int realpass = 0;
-        int[] arr = new int[testcases];
-        for(int i = 0; i < testcases; i++){
-            arr[i] = fs.nextInt();
-            if(i == pass - 1){
-                realpass = arr[i];
-            }
-        }    
+        for(char b: c){
+           // System.out.println((int)b - 'a');
+            ch[(int)b - 'a']++;
             
-            
-         for(int i = 0; i < testcases; i++){  
-            if(arr[i] <= 0 || arr[i] < realpass){
-                //System.out.println(total);
-                break;
-            }else
-                total++;
         }
-        System.out.println(total);
+        
+        //System.out.println(ch.toString());
+        
+        for(int a: ch){
+            if(a > 0){
+               // System.out.println(a);
+                total++;
+            }
+        }
+        
+        if(total%2 == 0){
+            System.out.println("CHAT WITH HER!");
+        }else{
+            System.out.println("IGNORE HIM!");
+        }
     }
 
   
 }
-
-/*
-8 5
-10 9 8 7 7 7 5 5
-6
-
-
-
-5 1
-1 1 1 1 1
-5
-*/
