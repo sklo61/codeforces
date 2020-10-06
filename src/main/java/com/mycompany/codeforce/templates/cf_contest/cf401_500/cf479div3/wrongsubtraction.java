@@ -38,17 +38,30 @@ public class wrongsubtraction {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
         char[] num = fs.next().toCharArray();
-        int operation = fs.nextInt();
-        
-        for(int i = 0; i < operation; i++){
-            if(num[num.length-1] == '0'){
-                num.length = num.length-1;
-            }
+        int[] nums = new int[num.length];
+        for (int i = 0; i < num.length; i++) {
+            nums[i] = num[i] - '0';
+           // System.out.print(nums[i]);
         }
+        int operation = fs.nextInt();
+        int pointer = nums.length - 1;
+       // System.out.println("");
+
+        for (int i = 0; i < operation; i++) {
+           // System.out.println("current: " + nums[pointer]);
+            if (nums[pointer] == 0) {
+                pointer--;
+            } else {
+                nums[pointer]--;
+            }
+
             
+        }
+
+        for (int j = 0; j <= pointer; j++) {
+                System.out.print(nums[j]);
+            }
+            System.out.println("");
     }
 
-  
 }
-
-
