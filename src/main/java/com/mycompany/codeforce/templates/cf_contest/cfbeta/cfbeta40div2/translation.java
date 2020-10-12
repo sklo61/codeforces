@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.codeforce.templates.cf_contest.cf304div2;
+package com.mycompany.codeforce.templates.cf_contest.cfbeta.cfbeta40div2;
 
 import java.util.*;
 import java.io.*;
 
-public class soldierandbananas {
+public class translation {
 
     static class FastScanner {
 
@@ -32,23 +32,36 @@ public class soldierandbananas {
         long nextLong() {
             return Long.parseLong(next());
         }
+        
+        String nextLine() throws IOException{
+            return br.readLine();
+        }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
-        int cost = fs.nextInt();
-        int money = fs.nextInt();
-        int bananas = fs.nextInt();
-        int total = 0;
-        for(int i = 0; i < bananas; i++){
-            total += i+1;
+        
+        char[] a = fs.nextLine().toCharArray();
+        char[] b = fs.nextLine().toCharArray();
+        
+        
+        
+       // boolean flag = true;
+        int i = 0;
+        int j = b.length-1;
+        
+        while(a[i] == b[j] && j > 0 ){
+            ++i;
+            --j;
         }
         
-        if(total*cost > money)
-            System.out.println(total*cost - money);
-        else 
-            System.out.println(0);
+        //System.out.println(i);
+        
+        if(i == a.length-1 && a[i] == b[j])
+            System.out.println("YES");
+        else
+            System.out.println("NO");
     }
 
   
