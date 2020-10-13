@@ -37,8 +37,14 @@ public class wheresmyinternet {
     public static void main(String[] args) {
         PrintWriter out = new PrintWriter(System.out);
         FastScanner fs = new FastScanner();
-        out.print("Hello World!");
-        out.close ();
+        HashMap<Integer, Integer> ht = new HashMap<>();
+        int nums = fs.nextInt();
+        int lines = fs.nextInt();
+        for(int i = 0; i < lines; i++){
+            int a = fs.nextInt();
+            int b = fs.nextInt();
+            
+        }
     }
 
   
